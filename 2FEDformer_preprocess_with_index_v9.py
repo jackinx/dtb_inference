@@ -35,11 +35,8 @@ SCALER_DIR = PROCESSED_DATA_DIR / "scalers"
 METADATA_DIR = PROCESSED_DATA_DIR / "metadata"
 LOG_DIR = PROCESSED_DATA_DIR / "logs"
 
-# 소스 DB 경로는 기존 경로를 사용
-SOURCE_PROJECT_ROOT = PROJECT_ROOT.parent / "DeepTrader_baekdoosan"
-if not SOURCE_PROJECT_ROOT.exists():
-    SOURCE_PROJECT_ROOT = Path(r"C:\Users\jacki\OneDrive\Documents\anaconda_projects\DeepTrader_baekdoosan")
-SOURCE_DB_PATH = SOURCE_PROJECT_ROOT / "stock_data.db"
+# 소스 DB 경로는 프로젝트 루트에 있는 파일을 사용하도록 수정
+SOURCE_DB_PATH = PROJECT_ROOT / "stock_data.db"
 
 
 # --- 처리 설정 ---

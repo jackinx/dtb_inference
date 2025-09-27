@@ -111,10 +111,7 @@ class Config:
         # ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 여기까지 전체 수정 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
         
         
-        source_project_root = self.PROJECT_ROOT.parent / "DeepTrader_baekdoosan"
-        if not source_project_root.exists():
-            source_project_root = Path(r"C:\Users\jacki\OneDrive\Documents\anaconda_projects\DeepTrader_baekdoosan")
-        self.SOURCE_DB_PATH = source_project_root / "stock_data.db"
+        self.SOURCE_DB_PATH = self.PROJECT_ROOT / "stock_data.db"
         
         self.MAX_CONCURRENT_PROCESSES = max(1, mp.cpu_count() // 2)
         self.DB_TIMEOUT = 30
